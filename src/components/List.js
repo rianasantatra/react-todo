@@ -14,7 +14,7 @@ const List = ({ data, handleRemoveItem, handleUpdateItem }) => {
 
   useEffect(() => {
     setTodos(data);
-  }, []);
+  }, [data]);
 
   if (!(todos.length > 0)) {
     return (
@@ -28,10 +28,10 @@ const List = ({ data, handleRemoveItem, handleUpdateItem }) => {
     <ul>
       {todos.map((item, index) => (
         <ListItem
-          key={item.todo}
+          key={index}
           index={index}
-          handleRemoveItem={handleRemoveItem}
           handleUpdateItem={handleUpdateItem}
+          handleRemoveItem={handleRemoveItem}
           todos={item}
         />
       ))}
