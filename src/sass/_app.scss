@@ -21,7 +21,7 @@
     list-style: none;
 
     li {
-      display: block;
+      display: flex;
       padding: 5px 8px;
       margin-bottom: 3px;
       position: relative;
@@ -33,6 +33,7 @@
       .item-wrapper {
         display: flex;
         align-items: center;
+        flex: 2;
       }
 
       .status {
@@ -42,6 +43,13 @@
         border: 1px solid #938989;
         margin-right: 8px;
         border-radius: 4px;
+
+        &.completed {
+          background: #f8b501;
+        }
+        svg {
+          color: #fff;
+        }
       }
     }
     button {
@@ -51,6 +59,7 @@
       transform: translateY(-50%);
       background: transparent;
       border: 0;
+      flex: 1;
     }
   }
 }

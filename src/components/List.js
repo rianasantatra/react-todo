@@ -8,7 +8,11 @@ const ListItem = ({ todos, index, handleRemoveItem, handleUpdateItem }) => {
   return (
     <li>
       <div className="item-wrapper" onClick={() => handleUpdateItem(index)}>
-        <span className="status">
+        <span
+          className={
+            todos.status == "completed" ? "status completed" : "status"
+          }
+        >
           {todos.status == "completed" ? <AiOutlineCheck /> : null}
         </span>
         {todos.todo}
