@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from "react";
 
+import { AiOutlineCheck } from "react-icons/ai";
+
+import { BsFillTrashFill } from "react-icons/bs";
+
 const ListItem = ({ todos, index, handleRemoveItem, handleUpdateItem }) => {
   return (
     <li>
-      <span>{todos.todo}</span>
-      <button onClick={() => handleRemoveItem(index)}>remove</button>
+      <div className="item-wrapper" onClick={() => handleUpdateItem(index)}>
+        <span className="status">
+          {todos.status == "completed" ? <AiOutlineCheck /> : null}
+        </span>
+        {todos.todo}
+      </div>
+      <button onClick={() => handleRemoveItem(index)}>
+        <BsFillTrashFill />
+      </button>
     </li>
   );
 };

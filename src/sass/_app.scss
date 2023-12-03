@@ -1,0 +1,56 @@
+.App {
+  .todo-wrapper {
+    width: 100%;
+    max-width: 330px;
+    margin: 1.5em auto 0 auto;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+  input {
+    width: 100%;
+    margin-bottom: 0.8em;
+    border: 1px solid rgb(148, 143, 143);
+    padding: 5px 8px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: block;
+      padding: 5px 8px;
+      margin-bottom: 3px;
+      position: relative;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .item-wrapper {
+        display: flex;
+        align-items: center;
+      }
+
+      .status {
+        display: inline-block;
+        height: 18px;
+        width: 18px;
+        border: 1px solid #938989;
+        margin-right: 8px;
+        border-radius: 4px;
+      }
+    }
+    button {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+      background: transparent;
+      border: 0;
+    }
+  }
+}

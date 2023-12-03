@@ -9,9 +9,9 @@ import TextField from "./components/Textfield";
 function App() {
   const dummyData = [
     { todo: "feed the dog", status: "pending" },
-    { todo: "feed the dog", status: "pending" },
-    { todo: "feed the dog", status: "pending" },
-    { todo: "feed the dog", status: "pending" },
+    { todo: "feed the cat", status: "pending" },
+    { todo: "buy new book", status: "pending" },
+    { todo: "buy new shoes", status: "pending" },
   ];
 
   const [todos, setTodos] = useState([]);
@@ -34,7 +34,7 @@ function App() {
 
   const handleUpdateItem = (index) => {
     let currentItems = [...todos];
-    currentItems(index).status = "completed";
+    currentItems[index].status = "completed";
     console.log({ index, currentItems });
     setTodos((prevItems) => currentItems);
   };
