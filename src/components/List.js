@@ -10,10 +10,10 @@ const ListItem = ({ todos, index, handleRemoveItem, handleUpdateItem }) => {
       <div className="item-wrapper" onClick={() => handleUpdateItem(index)}>
         <span
           className={
-            todos.status == "completed" ? "status completed" : "status"
+            todos.status === "completed" ? "status completed" : "status"
           }
         >
-          {todos.status == "completed" ? <AiOutlineCheck /> : null}
+          {todos.status === "completed" ? <AiOutlineCheck /> : null}
         </span>
         {todos.todo}
       </div>

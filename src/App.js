@@ -34,7 +34,7 @@ function App() {
 
   const handleUpdateItem = (index) => {
     let currentItems = [...todos];
-    currentItems[index].status = "completed";
+    currentItems(index).status = "completed";
     console.log({ index, currentItems });
     setTodos((prevItems) => currentItems);
   };
